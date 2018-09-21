@@ -1,0 +1,35 @@
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (zenburn-theme yaml-mode which-key smartparens smart-tab smart-mode-line rspec-mode projectile-rails magit json-mode helm-rails helm-projectile helm-ag gitignore-mode gitconfig-mode exec-path-from-shell dockerfile-mode csv-mode crux browse-kill-ring better-defaults beacon))))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+(defcustom emaks-indent-sensitive-modes
+  '(conf-mode coffee-mode haml-mode python-mode slim-mode yaml-mode)
+  "Modes for which auto-indenting is suppressed."
+  :type 'list
+  :group 'emaks)
+
+(defcustom emaks-yank-indent-modes '(LaTeX-mode TeX-mode)
+  "Modes in which to indent regions that are yanked (or yank-popped).
+Only modes that don't derive from `prog-mode' should be listed here."
+  :type 'list
+  :group 'emaks)
+
+(defcustom emaks-yank-indent-threshold 1000
+  "Threshold (# chars) over which indentation does not automatically occur."
+  :type 'number
+  :group 'emaks)
+
+(provide 'emaks-custom)
